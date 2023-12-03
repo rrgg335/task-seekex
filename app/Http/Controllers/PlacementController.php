@@ -9,7 +9,6 @@ class PlacementController extends Controller{
 	public function index(){
 		$ballsinbuckets = BallsInBuckets::get();
 		$ballsinbuckets = $ballsinbuckets->groupBy('bucket_id');
-		//print_r($ballsinbuckets); die;
 		return view('current-placement.index',compact('ballsinbuckets'));
 	}
 
